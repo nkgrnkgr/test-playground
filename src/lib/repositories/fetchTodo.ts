@@ -10,5 +10,6 @@ export const fetchTodo = async (id: number) => {
     `https://jsonplaceholder.typicode.com/todos/${id}`,
   );
   const data = await response.json();
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   return data as Todo;
 };

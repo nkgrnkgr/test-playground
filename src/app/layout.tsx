@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AppProvider } from "./_components/AppProvider";
 import "./global.css";
 
 export const metadata: Metadata = {
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <AppProvider>{children}</AppProvider>
+      </body>
     </html>
   );
 }
