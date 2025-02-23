@@ -1,7 +1,7 @@
 "use client";
 
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { fetchTodo } from "../../../lib/repositories/fetchTodo";
+import { repositories } from "../../../lib/repositories";
 
 type Props = {
   todoId: number;
@@ -10,12 +10,15 @@ type Props = {
 export const DataFetch = ({ todoId }: Props) => {
   const { data } = useSuspenseQuery({
     queryKey: ["todos", todoId],
-    queryFn: () => fetchTodo(todoId),
+    queryFn: () => repositories.fetchTodo(todoId),
   });
 
   return (
     <div>
-      <pre className="bg-gray-800 text-white p-4 rounded-md overflow-auto">
+      <pre
+        data-testid="data"
+        className="bg-gray-800 text-white p-4 rounded-md overflow-auto"
+      >
         {JSON.stringify(data, null, 2)}
       </pre>
     </div>
