@@ -4,7 +4,7 @@ import { describe, expect, test, vi } from "vitest";
 import { DataFetch } from ".";
 import { repositories } from "../../../lib/repositories";
 import { server } from "../../../mocks/server";
-import { MockedAppProvider } from "../MockedAppRrovider";
+import { MockedAppProvider } from "../MockedAppProvider";
 
 const TEST_DATA = {
   userId: 1,
