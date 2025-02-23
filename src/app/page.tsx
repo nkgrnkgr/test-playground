@@ -1,13 +1,18 @@
 import { Link } from "../components/Link";
 import { Title } from "../components/Title";
-import Counter from "./_components/Counter";
 
 export default function Home() {
   return (
     <div>
       <Title>Home</Title>
-      <Counter />
-      <Link href="/client-data-fetch">Client Data Fetch</Link>
+      <ul className="list-disc pl-4 space-y-2">
+        <li>
+          <Link href="/counter">Counter</Link>
+        </li>
+        <li>
+          <Link href="/client-data-fetch">Client Data Fetch</Link>
+        </li>
+      </ul>
     </div>
   );
 }
