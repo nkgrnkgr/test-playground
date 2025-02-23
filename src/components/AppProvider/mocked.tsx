@@ -1,9 +1,6 @@
-"use client";
-
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Suspense } from "react";
-import {} from "../loading";
-import { Loading } from "./Loading";
+import { Loading } from "../Loading";
 
 type Props = {
   children: React.ReactNode;

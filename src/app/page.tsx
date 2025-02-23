@@ -1,12 +1,13 @@
+import { Link } from "../components/Link";
+import { Title } from "../components/Title";
 import Counter from "./_components/Counter";
-import { DataFetch } from "./_components/DataFetch";
 
 export default function Home() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Home</h1>
+      <Title>Home</Title>
       <Counter />
-      <DataFetch todoId={1} />
+      <Link href="/client-data-fetch">Client Data Fetch</Link>
     </div>
   );
 }

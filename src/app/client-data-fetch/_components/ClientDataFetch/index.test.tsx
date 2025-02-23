@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { http, HttpResponse } from "msw";
 import { describe, expect, test, vi } from "vitest";
-import { DataFetch } from ".";
-import { repositories } from "../../../lib/repositories";
-import { server } from "../../../mocks/server";
-import { MockedAppProvider } from "../MockedAppProvider";
+import { ClientDataFetch } from ".";
+import { MockedAppProvider } from "../../../../components/AppProvider/mocked";
+import { repositories } from "../../../../lib/repositories";
+import { server } from "../../../../mocks/server";
 
 const TEST_DATA = {
   userId: 1,
@@ -13,14 +13,14 @@ const TEST_DATA = {
   completed: false,
 };
 
-describe("DataFetch", () => {
+describe("ClientDataFetch", () => {
   test("vi.spyOnでMockする", async () => {
     // FetcherをSpyして通信をMockするパターン
     vi.spyOn(repositories, "fetchTodo").mockResolvedValue(TEST_DATA);
 
     render(
       <MockedAppProvider>
-        <DataFetch todoId={1} />
+        <ClientDataFetch todoId={1} />
       </MockedAppProvider>,
     );
     const data = await screen.findByTestId("data");
@@ -36,7 +36,7 @@ describe("DataFetch", () => {
 
     render(
       <MockedAppProvider>
-        <DataFetch todoId={1} />
+        <ClientDataFetch todoId={1} />
       </MockedAppProvider>,
     );
     const data = await screen.findByTestId("data");

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { AppProvider } from "./_components/AppProvider";
+import { AppProvider } from "../components/AppProvider";
 import "./global.css";
+import { Footer } from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Test Playground",
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body suppressHydrationWarning>
-        <AppProvider>{children}</AppProvider>
+        <div className="flex flex-col min-h-screen p-4">
+          <AppProvider>{children}</AppProvider>
+          <Footer />
+        </div>
       </body>
     </html>
   );

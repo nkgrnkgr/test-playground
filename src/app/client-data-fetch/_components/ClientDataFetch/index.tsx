@@ -1,13 +1,13 @@
 "use client";
 
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { repositories } from "../../../lib/repositories";
+import { repositories } from "../../../../lib/repositories";
 
 type Props = {
   todoId: number;
 };
 
-export const DataFetch = ({ todoId }: Props) => {
+export const ClientDataFetch = ({ todoId }: Props) => {
   const { data } = useSuspenseQuery({
     queryKey: ["todos", todoId],
     queryFn: () => repositories.fetchTodo(todoId),
