@@ -9,10 +9,6 @@ const Counter = () => {
     setCount(count + 1);
   };
 
-  const decrement = () => {
-    setCount(count - 1);
-  };
-
   return (
     <div>
       <h2 data-testid="counter">Counter: {count}</h2>

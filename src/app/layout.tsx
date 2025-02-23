@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { RepositoriesProvider } from "../components/RepositoriesContextProvider/RepositoriesProvider";
+import "./global.css";
 
 export const metadata: Metadata = {
   title: "Test Playground",
@@ -12,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <RepositoriesProvider>{children}</RepositoriesProvider>
+      </body>
     </html>
   );
 }
