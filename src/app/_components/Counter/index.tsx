@@ -15,12 +15,9 @@ const Counter = () => {
 
   return (
     <div>
-      <h1>Counter: {count}</h1>
+      <h2 data-testid="counter">Counter: {count}</h2>
       <button type="button" onClick={increment}>
-        Increment
-      </button>
-      <button type="button" onClick={decrement}>
-        Decrement
+        Add
       </button>
     </div>
   );
