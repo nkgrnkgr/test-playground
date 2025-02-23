@@ -1,6 +1,7 @@
 "use client";
 
 import { useSuspenseQuery } from "@tanstack/react-query";
+import { DataViewer } from "../../../../components/DataViewer";
 import { repositories } from "../../../../lib/repositories";
 
 type Props = {
@@ -13,14 +14,5 @@ export const ClientDataFetch = ({ todoId }: Props) => {
     queryFn: () => repositories.fetchTodo(todoId),
   });
 
-  return (
-    <div>
-      <pre
-        data-testid="data"
-        className="bg-gray-800 text-white p-4 rounded-md overflow-auto"
-      >
-        {JSON.stringify(data, null, 2)}
-      </pre>
-    </div>
-  );
+  return <DataViewer data={data} />;
 };

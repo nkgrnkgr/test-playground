@@ -12,6 +12,9 @@ export default function Home() {
         <li>
           <Link href="/client-data-fetch">Client Data Fetch</Link>
         </li>
+        <li>
+          <Link href="/server-data-fetch">Server Data Fetch</Link>
+        </li>
       </ul>
     </div>
   );
