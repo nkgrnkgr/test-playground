@@ -13,6 +13,7 @@ describe("Counter", () => {
       name: "Add",
     });
     await user.click(addButton);
+    expect(counter).toBeInTheDocument();
     expect(counter).toHaveTextContent("Counter: 1");
   });
 });
