@@ -17,9 +17,11 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.2.0",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
     "typescript": "^5",
     "vitest": "^3.0.6"
   }
