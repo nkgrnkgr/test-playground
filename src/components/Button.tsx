@@ -1,3 +1,4 @@
+"use client";
 import { type ButtonProps, Button as Component } from "react-aria-components";
 
 type Props = {
