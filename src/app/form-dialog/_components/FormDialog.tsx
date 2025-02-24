@@ -1,6 +1,5 @@
 "use client";
 
-import { Heading } from "react-aria-components";
 import { Button } from "../../../components/Button";
 import { ModalDialog } from "../../../components/Dialog";
 
