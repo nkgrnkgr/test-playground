@@ -18,8 +18,8 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <div className="flex flex-col min-h-screen p-4">
           <AppProvider>{children}</AppProvider>
-          <Footer />
         </div>
+        <Footer />
       </body>
     </html>
   );
