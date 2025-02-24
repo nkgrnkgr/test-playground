@@ -17,6 +17,9 @@ export default function Home() {
         <ListItem>
           <Link href="/server-data-fetch">Server Data Fetch</Link>
         </ListItem>
+        <ListItem>
+          <Link href="/form-dialog">Form Dialog</Link>
+        </ListItem>
       </List>
     </div>
   );
